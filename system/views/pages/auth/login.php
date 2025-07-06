@@ -12,8 +12,8 @@ require_once LAYOUT.'/header.php';
                     <div class="col-12">
                         <!-- breadcrumb-list start -->
                         <ul class="breadcrumb-list">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">login &amp; register</li>
+                            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                            <li class="breadcrumb-item active">Đăng nhập &amp; Đăng ký</li>
                         </ul>
                         <!-- breadcrumb-list end -->
                     </div>
@@ -31,10 +31,10 @@ require_once LAYOUT.'/header.php';
                             <!-- login-register-tab-list start -->
                             <div class="login-register-tab-list nav">
                                 <a class="active" data-bs-toggle="tab" href="#lg1">
-                                    <h4> login </h4>
+                                    <h4> Đăng nhập </h4>
                                 </a>
                                 <a data-bs-toggle="tab" href="#lg2">
-                                    <h4> register </h4>
+                                    <h4> Đăng ký </h4>
                                 </a>
                             </div>
                             <!-- login-register-tab-list end -->
@@ -44,17 +44,17 @@ require_once LAYOUT.'/header.php';
                                         <div class="login-register-form">
                                             <form action="#" method="post">
                                                 <div class="login-input-box">
-                                                    <input type="text" name="user-name" placeholder="User Name">
-                                                    <input type="password" name="user-password" placeholder="Password">
+                                                    <input type="text" name="user-name" placeholder="Tên đăng nhập">
+                                                    <input type="password" name="user-password" placeholder="Mật khẩu">
                                                 </div>
                                                 <div class="button-box">
                                                     <div class="login-toggle-btn">
                                                         <input type="checkbox">
-                                                        <label>Remember me</label>
-                                                        <a href="#">Forgot Password?</a>
+                                                        <label>Ghi nhớ</label>
+                                                        <a href="#">Quên mật khẩu?</a>
                                                     </div>
                                                     <div class="button-box">
-                                                        <button class="login-btn btn" type="submit"><span>Login</span></button>
+                                                        <button class="login-btn btn" type="submit"><span>Đăng nhập</span></button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -66,12 +66,12 @@ require_once LAYOUT.'/header.php';
                                         <div class="login-register-form">
                                             <form action="#" method="post">
                                                 <div class="login-input-box">
-                                                    <input type="text" name="user-name" placeholder="User Name">
-                                                    <input type="password" name="user-password" placeholder="Password">
+                                                    <input type="text" name="user-name" placeholder="Tên đăng nhập">
+                                                    <input type="password" name="user-password" placeholder="Mật khẩu">
                                                     <input name="user-email" placeholder="Email" type="email">
                                                 </div>
                                                 <div class="button-box">
-                                                    <button class="register-btn btn" type="submit"><span>Register</span></button>
+                                                        <button class="register-btn btn" type="submit"><span>Đăng ký</span></button>
                                                 </div>
                                             </form>
                                         </div>
@@ -88,7 +88,7 @@ require_once LAYOUT.'/header.php';
 <!-- footer Start -->
       
 
-   <script>
+   <!-- <script>
    
       $(function(){
         $('#login').click(function (e) { 
@@ -133,7 +133,7 @@ require_once LAYOUT.'/header.php';
             });
         });
     });
-</script>
+</script> -->
 <?php
 require_once LAYOUT.'/footer.php';
 }

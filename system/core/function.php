@@ -87,3 +87,11 @@ function auto($url)
 	curl_close($curl);
 	return $ch;
 }
+
+function format_phone($phone) {
+	$phone = preg_replace('/[^0-9]/', '', $phone);
+	if (strlen($phone) == 10) {
+		return '(' . substr($phone, 0, 4) . ') ' . substr($phone, 4, 3) . ' ' . substr($phone, 7);
+	}
+	return $phone;
+}

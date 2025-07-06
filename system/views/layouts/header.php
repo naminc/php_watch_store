@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Ruiz</title>
-    <meta name="robots" content="noindex, follow" />
+    <title>Trang chủ | <?php echo $settings['title']; ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
@@ -50,11 +49,15 @@
                         <div class="col-lg-6">
                             <div class="top-info-wrap text-end">
                                 <ul class="my-account-container">
-                                    <?php if(isset($_SESSION['username'])){ ?>
+                                    <?php if(empty($_SESSION['username'])){ ?>
                                         <li><a href="/my-account">Tài khoản</a></li>
+                                        <li>|</li>
                                         <li><a href="/cart">Giỏ hàng</a></li>
+                                        <li>|</li>
+                                        <li><a href="/logout">Đăng xuất</a></li>
                                     <?php }else{ ?>
                                         <li><a href="/auth/login">Đăng nhập</a></li>
+                                        <li>|</li>
                                         <li><a href="/auth/login">Đăng ký</a></li>
                                     <?php } ?>
                                 </ul>
@@ -68,7 +71,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-3 col-md-4 col-5">
                             <div class="logo-area">
-                                <a href="/"><img src="/assets/images/logo/logo.png" alt=""></a>
+                                <a href="/"><img src="<?php echo $settings['logo']; ?>" alt="Logo"></a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -212,7 +215,7 @@
                         </div>
 
                         <div class="col-5 col-md-6 d-block d-lg-none">
-                            <div class="logo"><a href="/"><img src="/assets/images/logo/logo.png" alt=""></a></div>
+                            <div class="logo"><a href="/"><img src="<?php echo $settings['logo']; ?>" alt="Logo"></a></div>
                         </div>
                         
                         
@@ -295,7 +298,7 @@
 
                         <div class="search-box-offcanvas">
                             <form>
-                                <input type="text" placeholder="Search product...">
+                                <input type="text" placeholder="Tìm kiếm sản phẩm...">
                                 <button class="search-btn"><i class="icon-magnifier"></i></button>
                             </form>
                         </div>
@@ -358,8 +361,8 @@
                                             <li><a href="login-register.html">login &amp; register</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="contact-us.html">Contact</a></li>
+                                    <li><a href="/about-us">Giới thiệu</a></li>
+                                    <li><a href="/contact-us">Liên hệ</a></li>
                                 </ul>
                             </nav>
                             <!-- mobile menu navigation end -->
@@ -367,38 +370,24 @@
                         <!-- mobile menu end -->
 
 
-                        <div class="header-top-settings offcanvas-curreny-lang-support">
-                            <h5>My Account</h5>
-                            <ul class="nav align-items-center">
-                                <li class="language">English <i class="fa fa-angle-down"></i>
-                                    <ul class="dropdown-list">
-                                        <li><a href="#">English</a></li>
-                                        <li><a href="#">French</a></li>
-                                    </ul>
-                                </li>
-                                <li class="curreny-wrap">Currency <i class="fa fa-angle-down"></i>
-                                    <ul class="dropdown-list curreny-list">
-                                        <li><a href="#">$ USD</a></li>
-                                        <li><a href="#"> € EURO</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
                         <!-- offcanvas widget area start -->
                         <div class="offcanvas-widget-area">
                             <div class="top-info-wrap text-left text-black">
-                                <h5>My Account</h5>
+                                <h5>Tài khoản</h5>
                                 <ul class="offcanvas-account-container">
-                                    <li><a href="my-account.html">My account</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <?php if(isset($_SESSION['username'])){ ?>
+                                        <li><a href="/my-account">Tài khoản</a></li>
+                                        <li><a href="/cart">Giỏ hàng</a></li>
+                                        <li><a href="/wishlist">Yêu thích</a></li>
+                                        <li><a href="/checkout">Thanh toán</a></li>
+                                    <?php }else{ ?>
+                                        <li><a href="/auth/login">Đăng nhập</a></li>
+                                        <li><a href="/auth/login">Đăng ký</a></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
 
                         </div>
-                        <!-- offcanvas widget area end -->
                     </div>
                 </div>
             </aside>
