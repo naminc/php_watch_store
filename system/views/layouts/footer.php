@@ -3,14 +3,12 @@
           <div class="footer-top section-pb section-pt-60">
               <div class="container">
                   <div class="row">
-                      <div class="col-lg-4 col-md-6">
-
-                          <div class="widget-footer mt-40">
-                              <h6 class="title-widget">Liên hệ</h6>
-
+                      <div class="col-lg-5 col-md-6">
+                          <div class="widget-footer mt-10">
+                              <h6 class="title-widget"><i class="fa fa-phone"></i> &nbsp;Liên hệ</h6>
                               <div class="footer-addres">
                                   <div class="widget-content mb--20">
-                                      <p>Address: 39 Đường số 1, Khu phố 1, Phường Tân Phong, Quận 7, TP.HCM</p>
+                                      <p>Địa chỉ: 39 Đường số 1, Khu phố 1, Phường Tân Phong, Quận 7, TP.HCM</p>
                                       <p>Điện thoại: <a href="tel:<?= $settings['phone']; ?>"><?= format_phone($settings['phone']); ?></a></p>
                                       <p>Email: <a href="mailto:<?= $settings['email']; ?>"><?= $settings['email']; ?></a></p>
                                   </div>
@@ -37,35 +35,21 @@
                           </div>
 
                       </div>
-                      <div class="col-lg-2 col-md-6 col-sm-6">
-                          <div class="widget-footer mt-40">
-                              <h6 class="title-widget">Thông tin</h6>
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                          <div class="widget-footer mt-10">
+                              <h6 class="title-widget"><i class="fa fa-info-circle"></i> &nbsp;Thông tin</h6>
                               <ul class="footer-list">
-                                  <li><a href="index.html">Home</a></li>
-                                  <li><a href="about-us.html">About Us</a></li>
-                                  <li><a href="contact.html">Quick Contact</a></li>
-                                  <li><a href="blog.html">Blog Pages</a></li>
-                                  <li><a href="#">Concord History</a></li>
-                                  <li><a href="#">Client Feed</a></li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="col-lg-2 col-md-6 col-sm-6">
-                          <div class="widget-footer mt-40">
-                                <h6 class="title-widget">Thêm</h6>
-                              <ul class="footer-list">
-
-                                  <li><a href="#">Concord History</a></li>
-                                  <li><a href="#">Client Feed</a></li>
-                                  <li><a href="about-us.html">About Us</a></li>
-                                  <li><a href="contact.html">Quick Contact</a></li>
-                                  <li><a href="blog.html">Blog Pages</a></li>
+                                  <li><a href="/">Trang chủ</a></li>
+                                  <li><a href="/about-us">Giới thiệu</a></li>
+                                  <li><a href="#contact">Liên hệ</a></li>
+                                  <li><a href="#">Blog</a></li>
+                                  <li><a href="#">Điều khoản và điều kiện</a></li>
                               </ul>
                           </div>
                       </div>
                       <div class="col-lg-4 col-md-6">
-                          <div class="widget-footer mt-40">
-                              <div class="mt-20">
+                          <div class="widget-footer mt-10">
+                              <div class="mt-10">
                                   <h6 class="title-widget"><i class="fa fa-map-marker"></i> &nbsp;Vị trí cửa hàng</h6>
                                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.800995363982!2d106.71804047469793!3d10.826536089325282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752881823d0fd5%3A0xd22e8c05452a8699!2zMzkgxJAuIFPhu5EgMTksIEhp4buHcCBCw6xuaCBDaMOhbmgsIFRo4bunIMSQ4bupYywgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1751804433283!5m2!1svi!2s" width="100%"
                                       height="200"
@@ -77,7 +61,6 @@
                               </div>
                           </div>
                       </div>
-
                   </div>
               </div>
           </div>
@@ -87,13 +70,12 @@
                   <div class="row align-items-center">
                       <div class="col-lg-6 col-md-6">
                           <div class="copy-left-text">
-                              <p>Copyright &copy; <a href="https://naminc.dev">NAMINC</a> 2025. All Right Reserved.</p>
+                              <p>Copyright &copy; <a href="https://naminc.dev"><?= strtoupper($settings['owner']); ?></a> <?= date('Y'); ?>. All Right Reserved.</p>
                           </div>
                       </div>
                       <div class="col-lg-6 col-md-6">
                           <div class="copy-right-image">
                               <img src="/assets/images/icon/img-payment.png" alt="">
-
                           </div>
                       </div>
                   </div>
@@ -101,10 +83,6 @@
           </div>
       </footer>
       <!-- footer End -->
-
-
-
-
       <!-- Modal -->
       <div class="modal fade modal-wrapper" id="exampleModalCenter">
           <div class="modal-dialog modal-dialog-centered" role="document">
@@ -213,7 +191,6 @@
       </div>
       </div>
       <script src="/assets/js/vendor/modernizr-3.6.0.min.js"></script>
-      <script src="/assets/js/vendor/jquery-3.6.1.min.js"></script>
       <script src="/assets/js/vendor/jquery-migrate-3.4.0.min.js"></script>
       <script src="/assets/js/vendor/bootstrap.min.js"></script>
       <script src="/assets/js/plugins/slick.min.js"></script>
@@ -225,6 +202,8 @@
       <script src="/assets/js/plugins/jqueryui.min.js"></script>
       <script src="/assets/js/plugins/ajax-contact.js"></script>
       <script src="/assets/js/main.js"></script>
+      <!-- custom js -->
+      <script src="/assets/js/custom.js?=<?= time(); ?>"></script>
       </body>
 
       </html>

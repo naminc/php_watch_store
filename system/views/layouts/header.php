@@ -17,10 +17,16 @@
     <link rel="stylesheet" href="/assets/css/plugins/nice-select.css">
     <link rel="stylesheet" href="/assets/css/plugins/fancy-box.css">
     <link rel="stylesheet" href="/assets/css/plugins/jqueryui.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css?=<?= time(); ?>">
+    <link rel="stylesheet" href="/assets/css/custom.css?=<?= time(); ?>">
     <!-- <link rel="stylesheet" href="assets/css/style.min.css"> -->
-
+    <!-- cdn jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- cdn toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
+
 <body>
 
     <div class="main-wrapper">
@@ -49,13 +55,13 @@
                         <div class="col-lg-6">
                             <div class="top-info-wrap text-end">
                                 <ul class="my-account-container">
-                                    <?php if(empty($_SESSION['username'])){ ?>
+                                    <?php if (isset($_SESSION['username'])) { ?>
                                         <li><a href="/my-account">Tài khoản</a></li>
                                         <li>|</li>
                                         <li><a href="/cart">Giỏ hàng</a></li>
                                         <li>|</li>
                                         <li><a href="/logout">Đăng xuất</a></li>
-                                    <?php }else{ ?>
+                                    <?php } else { ?>
                                         <li><a href="/auth/login">Đăng nhập</a></li>
                                         <li>|</li>
                                         <li><a href="/auth/login">Đăng ký</a></li>
@@ -92,7 +98,11 @@
                             <div class="right-blok-box text-white d-flex">
 
                                 <div class="user-wrap">
-                                    <a href="/my-account"> <i class="icon-user"></i></a>
+                                    <?php if (isset($_SESSION['username'])) { ?>
+                                        <a href="/my-account"> <i class="icon-user"></i></a>
+                                    <?php } else { ?>
+                                        <a href="/auth/login"> <i class="icon-user"></i></a>
+                                    <?php } ?>
                                 </div>
                                 <div class="shopping-cart-wrap">
                                     <a href="#"><i class="icon-basket-loaded"></i><span class="cart-total">2</span></a>
@@ -142,7 +152,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -217,8 +227,8 @@
                         <div class="col-5 col-md-6 d-block d-lg-none">
                             <div class="logo"><a href="/"><img src="<?php echo $settings['logo']; ?>" alt="Logo"></a></div>
                         </div>
-                        
-                        
+
+
                         <div class="col-lg-3 col-md-6 col-7 d-block d-lg-none">
                             <div class="right-blok-box text-white d-flex">
 
@@ -281,9 +291,9 @@
 
                             </div>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                 </div>
             </div>
@@ -375,12 +385,12 @@
                             <div class="top-info-wrap text-left text-black">
                                 <h5>Tài khoản</h5>
                                 <ul class="offcanvas-account-container">
-                                    <?php if(isset($_SESSION['username'])){ ?>
+                                    <?php if (isset($_SESSION['username'])) { ?>
                                         <li><a href="/my-account">Tài khoản</a></li>
                                         <li><a href="/cart">Giỏ hàng</a></li>
                                         <li><a href="/wishlist">Yêu thích</a></li>
                                         <li><a href="/checkout">Thanh toán</a></li>
-                                    <?php }else{ ?>
+                                    <?php } else { ?>
                                         <li><a href="/auth/login">Đăng nhập</a></li>
                                         <li><a href="/auth/login">Đăng ký</a></li>
                                     <?php } ?>

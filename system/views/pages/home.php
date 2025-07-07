@@ -1754,36 +1754,7 @@ require_once LAYOUT . '/header.php';
             </div>
         </div>
         <!-- letast blog area End -->
-        
-        <!-- our-brand-area start -->
-        <div class="our-brand-area section-pb">
-            <div class="container">
-                <div class="row our-brand-active">
-                    <div class="brand-single-item">
-                        <a href="#"><img src="assets/images/brand/brand-01.png" alt=""></a>
-                    </div>
-                    <div class="brand-single-item">
-                        <a href="#"><img src="assets/images/brand/brand-01.png" alt=""></a>
-                    </div>
-                    <div class="brand-single-item">
-                        <a href="#"><img src="assets/images/brand/brand-01.png" alt=""></a>
-                    </div>
-                    <div class="brand-single-item">
-                        <a href="#"><img src="assets/images/brand/brand-01.png" alt=""></a>
-                    </div>
-                    <div class="brand-single-item">
-                        <a href="#"><img src="assets/images/brand/brand-01.png" alt=""></a>
-                    </div>
-                    <div class="brand-single-item">
-                        <a href="#"><img src="assets/images/brand/brand-01.png" alt=""></a>
-                    </div>
-                    <div class="brand-single-item">
-                        <a href="#"><img src="assets/images/brand/brand-01.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- our-brand-area end -->
+
        
         <div class="newletter-area">
             <div class="container">
@@ -1799,9 +1770,9 @@ require_once LAYOUT . '/header.php';
 
                                 <div class="col-lg-5 col-md-7">
                                     <div class="newsletter-footer mb-30">
-                                        <input type="text" placeholder="Your email address...">
+                                        <input type="text" placeholder="Nhập email của bạn...">
                                         <div class="subscribe-button">
-                                            <button class="subscribe-btn">Subscribe</button>
+                                            <button class="subscribe-btn">Đăng ký</button>
                                         </div>
                                     </div>
                                 </div>
