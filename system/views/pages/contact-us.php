@@ -1,0 +1,1 @@
+This is contact us page <?= var_dump($_GET); ?>

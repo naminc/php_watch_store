@@ -41,9 +41,9 @@
                               <ul class="footer-list">
                                   <li><a href="/">Trang chủ</a></li>
                                   <li><a href="/about-us">Giới thiệu</a></li>
-                                  <li><a href="#contact">Liên hệ</a></li>
-                                  <li><a href="#">Blog</a></li>
-                                  <li><a href="#">Điều khoản và điều kiện</a></li>
+                                  <li><a href="/contact-us">Liên hệ</a></li>
+                                  <li><a href="/promotion">Khuyến mãi</a></li>
+                                  <li><a href="/terms-and-conditions">Điều khoản và điều kiện</a></li>
                               </ul>
                           </div>
                       </div>
@@ -204,6 +204,9 @@
       <script src="/assets/js/main.js"></script>
       <!-- custom js -->
       <script src="/assets/js/custom.js?=<?= time(); ?>"></script>
+      <?php if (empty($_SESSION['username'])) { ?>
+          <!-- custom js auth -->
+          <script src="/assets/js/custom/auth.js?=<?= time(); ?>"></script>
+      <?php } ?>
       </body>
-
       </html>

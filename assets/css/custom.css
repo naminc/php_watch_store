@@ -1,3 +1,7 @@
 #toast-container .toast {
   font-family: "Arial", sans-serif;
 }
+.admin-wrap {
+  position: relative;
+  padding-left: 10px;
+}

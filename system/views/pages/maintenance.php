@@ -1,0 +1,1 @@
+This is maintenance page <?= var_dump($_GET); ?>

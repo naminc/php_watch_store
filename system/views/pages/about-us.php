@@ -1,0 +1,1 @@
+This is about us page <?= var_dump($_GET); ?>

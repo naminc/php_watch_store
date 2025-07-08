@@ -1,0 +1,1 @@
+This is dashboard admin <?= var_dump($_GET); ?>

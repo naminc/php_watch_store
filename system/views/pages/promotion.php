@@ -1,0 +1,1 @@
+This is promotion page <?= var_dump($_GET); ?>

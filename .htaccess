@@ -1,10 +1,11 @@
 RewriteEngine On
+RewriteBase /
 
-# Bỏ qua nếu là file hoặc thư mục tồn tại
+# Nếu là file hoặc thư mục thật thì bỏ qua
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-# Gửi mọi request vào index.php và giữ nguyên query string (?id=...)
+# Rewrite URL đẹp thành index.php?url=...
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
 
 # php -- BEGIN cPanel-generated handler, do not edit

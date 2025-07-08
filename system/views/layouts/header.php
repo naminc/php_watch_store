@@ -96,7 +96,6 @@
                         </div>
                         <div class="col-lg-3">
                             <div class="right-blok-box text-white d-flex">
-
                                 <div class="user-wrap">
                                     <?php if (isset($_SESSION['username'])) { ?>
                                         <a href="/my-account"> <i class="icon-user"></i></a>
@@ -150,6 +149,12 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="admin-wrap">
+                                    <?php if (isset($_SESSION['username']) && $user['role'] == 'admin') { ?>
+                                        <a href="/admin/dashboard"> <i class="fa fa-cogs"></i></a>
+                                    <?php } ?>
+                                </div>
+
                             </div>
                         </div>
 
@@ -167,57 +172,20 @@
                                         <li class="active"><a href="/">Trang chủ</a>
                                         </li>
 
-                                        <li><a href="#">Shop <i class="fa fa-angle-down"></i></a>
-                                            <ul class="mega-menu">
-                                                <li><a href="#">Shop Layouts</a>
-                                                    <ul>
-                                                        <li><a href="shop.html">Shop Left Sidebar</a></li>
-                                                        <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                                                        <li><a href="shop-list-left.html">Shop List Left Sidebar</a></li>
-                                                        <li><a href="shop-list-right.html">Shop List Right Sidebar</a></li>
-                                                        <li><a href="shop-fullwidth.html">Shop Full Width</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="blog.html">Product Details</a>
-                                                    <ul>
-                                                        <li><a href="product-details.html">Single Product Details</a></li>
-                                                        <li><a href="variable-product-details.html">Variable Product Details</a></li>
-                                                        <li><a href="affiliate-product-details.html">affiliatel Product Details</a></li>
-                                                        <li><a href="gallery-product-details.html">Gallery Product Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Shop Pages</a>
-                                                    <ul>
-                                                        <li><a href="error404.html">Error 404</a></li>
-                                                        <li><a href="compare.html">Compare Page</a></li>
-                                                        <li><a href="cart.html">Cart Page</a></li>
-                                                        <li><a href="checkout.html">Checkout Page</a></li>
-                                                        <li><a href="wishlist.html">Wish List Page</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-
-                                        </li>
-                                        <li><a href="blog.html">Blog <i class="fa fa-angle-down"></i></a>
-
+                                        <li><a href="#">Danh mục <i class="fa fa-angle-down"></i></a>
+                                            <?php
+                                            $sql = "SELECT name, slug FROM categories WHERE status = 1 ORDER BY name ASC";
+                                            $categories = $DB->fetch_assoc($sql, 0);
+                                            ?>
                                             <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog Left Sidebar</a></li>
-                                                <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                                <li><a href="blog-grid.html">Blog Grid Page</a></li>
-                                                <li><a href="blog-largeimage.html">Blog Large Image</a></li>
-                                                <li><a href="blog-details.html">Blog Details Page</a></li>
+                                                <?php foreach ($categories as $category) { ?>
+                                                    <li><a href="/category/<?php echo $category['slug']; ?>"><?php echo $category['name']; ?></a></li>
+                                                <?php } ?>
                                             </ul>
                                         </li>
-
-                                        <li><a href="#">Pages <i class="fa fa-angle-down"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="frequently-questions.html">FAQ</a></li>
-                                                <li><a href="my-account.html">My Account</a></li>
-                                                <li><a href="login-register.html">login &amp; register</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="about-us.html">Giới thiệu</a></li>
-                                        <li><a href="contact-us.html">Liên hệ</a></li>
+                                        <li><a href="/about-us">Giới thiệu</a></li>
+                                        <li><a href="/promotion">Khuyến mãi</a></li>
+                                        <li><a href="/contact-us">Liên hệ</a></li>
                                     </ul>
                                 </nav>
 
