@@ -4,6 +4,7 @@ if (isset($_SESSION['username'])) {
     header('Location: /');
     exit;
 } else {
+    $title = 'Đăng nhập &amp; Đăng ký';
     require_once LAYOUT . '/header.php';
 ?>
     <div class="breadcrumb-area">

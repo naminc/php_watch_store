@@ -8,7 +8,7 @@
                               <h6 class="title-widget"><i class="fa fa-phone"></i> &nbsp;Liên hệ</h6>
                               <div class="footer-addres">
                                   <div class="widget-content mb--20">
-                                      <p>Địa chỉ: 39 Đường số 1, Khu phố 1, Phường Tân Phong, Quận 7, TP.HCM</p>
+                                      <p>Địa chỉ: <?= $settings['address']; ?></p>
                                       <p>Điện thoại: <a href="tel:<?= $settings['phone']; ?>"><?= format_phone($settings['phone']); ?></a></p>
                                       <p>Email: <a href="mailto:<?= $settings['email']; ?>"><?= $settings['email']; ?></a></p>
                                   </div>
@@ -70,7 +70,7 @@
                   <div class="row align-items-center">
                       <div class="col-lg-6 col-md-6">
                           <div class="copy-left-text">
-                              <p>Copyright &copy; <a href="https://naminc.dev"><?= strtoupper($settings['owner']); ?></a> <?= date('Y'); ?>. All Right Reserved.</p>
+                              <p>Copyright &copy; <a href="//<?= $settings['domain']; ?>"><?= strtoupper($settings['owner']); ?></a> <?= date('Y'); ?>. All Right Reserved.</p>
                           </div>
                       </div>
                       <div class="col-lg-6 col-md-6">

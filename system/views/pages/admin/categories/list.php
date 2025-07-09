@@ -1,0 +1,1 @@
+This is categories list page <?= var_dump($_GET); ?>

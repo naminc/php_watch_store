@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Trang chủ | <?php echo $settings['title']; ?></title>
-    <meta name="description" content="">
+    <title><?= $title; ?> | <?= $settings['title']; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <meta name="keywords" content="<?= $settings['keyword']; ?>">
+    <meta name="description" content="<?= $settings['description']; ?>">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= $settings['icon']; ?>">
     <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/vendor/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/vendor/simple-line-icons.css">
@@ -77,7 +78,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-3 col-md-4 col-5">
                             <div class="logo-area">
-                                <a href="/"><img src="<?php echo $settings['logo']; ?>" alt="Logo"></a>
+                                <a href="/"><img src="<?= $settings['logo']; ?>" alt="Logo"></a>
                             </div>
                         </div>
                         <div class="col-lg-6">

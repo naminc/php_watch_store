@@ -1,0 +1,1 @@
+This is my accont page <?= var_dump($_GET); ?>

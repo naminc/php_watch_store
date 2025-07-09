@@ -1,6 +1,8 @@
 <?php
 require_once './system/core/database.php';
+$title = 'Trang chủ';
 require_once LAYOUT . '/header.php';
+
 ?>
         <!-- Hero Section Start -->
         <div class="hero-slider hero-slider-one">
