@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/admin-assets/css/custom.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -83,12 +84,12 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="/admin/categories">Danh mục</a></li>
-                            <li><a href="/admin/products">Sản phẩm</a></li>
+                            <li><a href="/admin/categories/list">Danh mục</a></li>
+                            <li><a href="/admin/products/list">Sản phẩm</a></li>
                         </ul>
                     </li>
-                    <li><a href="/admin/orders"><i class="fa fa-shopping-cart"></i> <span>Quản lý đơn hàng</span></a></li>
-                    <li><a href="/admin/users"><i class="fa fa-users"></i> <span>Quản lý người dùng</span></a></li>
+                    <li><a href="/admin/orders/list"><i class="fa fa-shopping-cart"></i> <span>Quản lý đơn hàng</span></a></li>
+                    <li><a href="/admin/users/list"><i class="fa fa-users"></i> <span>Quản lý người dùng</span></a></li>
                 </ul>
             </section>
         </aside>

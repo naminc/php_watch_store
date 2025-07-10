@@ -16,7 +16,7 @@ class Router {
             if (file_exists($filePath)) {
                 require_once $filePath;
             } else {
-                require_once './system/views/layouts/404.html';
+                require_once './system/views/layouts/404.php';
             }
 
         } else {
